@@ -1,0 +1,142 @@
+.masters {
+  padding-top: 84px;
+  padding-bottom: 84px;
+  @media screen and (min-width: 768px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @media screen and (min-width: 768px) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+}
+
+.masters__pre-title {
+  margin-bottom: var(--typical-margin);
+}
+
+.masters__title {
+  color: var(--second-title-color);
+  margin-bottom: 44px;
+}
+
+.card-list__item-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.38;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #303030;
+  margin-bottom: 8px;
+  margin-top: 30px;
+}
+
+.card-list__item-text {
+  font-size: 14px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+  margin-bottom: 30px;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card-list__item {
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 60px) / 3);
+  }
+}
+
+.card-list__top-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-list__top-text {
+  position: absolute;
+  top: 0;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.6;
+  background-color: rgba(255, 106, 0, 0.485);
+  padding: 40px;
+  height: 100%;
+  overflow: auto;
+  transform: translateY(100%);
+  transition: transform 300ms linear;
+  .card-list__item:hover & {
+    transform: translateY(0);
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(117, 131, 212);
+    outline: 1px solid slategrey;
+  }
+}
+
+/* .masters-item {
+  width: 370px;
+}
+
+.masters-item:not(:last-child) {
+  margin-right: 30px;
+} */
+
+.socials {
+  display: flex;
+  justify-content: center;
+}
+
+.socials__item {
+  width: 44px;
+  height: 44px;
+  margin-left: 10px;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.socials__link {
+  @extend %align-list;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: tomato;
+  color: #ffffff;
+  &:hover,
+  &:focus {
+    background-color: teal;
+    color: var(--accent-color);
+  }
+}
+
+.socials__icon {
+  fill: currentColor;
+}
+
+/* .masters-soc-link:hover,
+.masters-soc-link:focus {
+  background-color: teal;
+}
+
+.masters-soc-link:hover .masters-soc-icon,
+.masters-soc-link:focus .masters-soc-icon {
+  fill: var(--accent-color);
+} */

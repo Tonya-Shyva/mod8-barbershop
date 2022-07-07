@@ -1,0 +1,24 @@
+.pre-title {
+  text-transform: uppercase;
+  @include font(600, 11px, 1.91, 0.1em);
+  @extend %align-list;
+  @media screen and (min-width: 768px) {
+    //  @include font(null, null, 1.36, null);
+    line-height: 1.36;
+  }
+  &::before {
+    content: '';
+    height: 1px;
+    width: 63px;
+    background-color: currentColor;
+    margin-right: 21px;
+  }
+}
+
+.pre-title--color-light {
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.pre-title--color-dark {
+  color: #303030;
+}
